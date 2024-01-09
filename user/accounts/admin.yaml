@@ -1,0 +1,11 @@
+state: enabled
+email: Asdfghjkl132@admin.com
+fullname: 'Admin Admin'
+title: Admin
+access:
+  admin:
+    login: true
+    super: true
+  site:
+    login: true
+hashed_password: $2y$10$z07w07C76SB0PrsxqE/1VO55FTlWzkz28YMTqhxW73Ic1/f0E/Gc.

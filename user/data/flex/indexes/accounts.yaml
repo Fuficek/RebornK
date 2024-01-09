@@ -1,0 +1,9 @@
+version: '1.2'
+timestamp: 1704815351
+count: 1
+index:
+  admin:
+    storage_key: admin
+    storage_timestamp: 1704815350
+    key: admin
+    email: asdfghjkl132@admin.com
