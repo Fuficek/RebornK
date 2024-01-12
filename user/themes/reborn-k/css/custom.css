@@ -285,12 +285,25 @@ body {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 5vw;
+  gap: 1vw;
+  width: 4000vw;
+  overflow-x: scroll;
 }
 .usage-item{
-  height: 15vw;
-  width: 15vw;
+  height: 30vw;
+  width: 40vw;
+  background-image: url("../images/paddleboard.png");
+  background-size: cover;
   background-color: #377D00;
+  position: relative;
+
+}
+.usage-name{
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  margin: 0;
+  color: white;
 }
 
 .mp-layout .mp-content{
