@@ -248,5 +248,9 @@ body {
   align-items: center;
   flex-direction: row;
   gap: 5vw;
-
+}
+.usage-item{
+  height: 15vw;
+  width: 15vw;
+  background-color: #377D00;
 }
