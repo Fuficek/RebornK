@@ -255,10 +255,11 @@ body {
 .usage-item{
   height: 30vw;
   width: 40vw;
-  background-image: url("../images/paddleboard.png");
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 66%, rgba(0, 0, 0, 1) 100%), url("../images/paddleboard.png");
   background-size: cover;
   background-color: #377D00;
   position: relative;
+  border-radius: 50px;
 
 }
 .usage-name{
@@ -286,4 +287,62 @@ body {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
+}
+
+.scroll_container {
+  height: 400vh;
+}
+
+.horizontal_scroll {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 400vw;
+  will-change: transform;
+  display: flex;
+  justify-content: space-between;
+}
+
+.scroll_contents {
+  height: 100%;
+  width: 100vw;
+}
+
+.sticky_wrap {
+  overflow: hidden;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.red {
+  background-color: #ff3d00;
+}
+
+.yellow {
+  background-color: #ffff00;
+}
+
+.green {
+  background-color: #05ff00;
+}
+
+.blue {
+  background-color: #2835f8;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #f7f7f7;
+}
+
+.left {
+  margin-top: 5vh;
+  margin-left: 5vw;
+}
+
+.right {
+  text-align: right;
+  margin-top: 85vh;
+  margin-right: 5vw;
 }
