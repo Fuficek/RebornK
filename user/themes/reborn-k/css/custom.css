@@ -22,7 +22,13 @@
     scroll-behavior: smooth;
     --serif: 'Source Serif 4', serif;
 }
-
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 
 
 /*-------------------- NAVBAR -------------------------*/
@@ -233,4 +239,14 @@
  /*image on the other side */
 .iotos{
   flex-direction: row-reverse;
+}
+
+/* mainpage - layout - 1*/
+.usage-wrapper{
+  background-color: #80B55B;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5vw;
+
 }
