@@ -1,47 +1,46 @@
-{% macro loop(page) %}
-    {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'selected' : '' %}
-        {% if p.children.visible.count > 0 %}
-            <li class="has-children {{ current_page|e }}">
-                <a href="{{ p.url|e }}">
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon|e }}"></i>{% endif %}
-                    {{ p.menu|e }}
-                </a>
-                <ul>
-                    {{ _self.loop(p) }}
-                </ul>
-            </li>
-        {% else %}
-            <li class="{{ current_page|e }}">
-                <a href="{{ p.url|e }}">
-                    {% if p.header.icon %}<i class="fa fa-{{ p.header.icon|e }}"></i>{% endif %}
-                    {{ p.menu|e }}
-                </a>
-            </li>
-        {% endif %}
-    {% endfor %}
-{% endmacro %}
 
-<ul>
-    {% if config.theme.dropdown.enabled %}
-        {{ _self.loop(pages) }}
-    {% else %}
-        {% for page in pages.children.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'selected' : '' %}
-            <li class="{{ current_page|e }}">
-                <a href="{{ page.url|e }}">
-                    {% if page.header.icon %}<i class="fa fa-{{ page.header.icon|e }}"></i>{% endif %}
-                    {{ page.menu|e }}
-                </a>
+    <nav class="navbar">
+        <a href="{{ home_url }}" class="navbar-brand mr-10"><img src="{{ url(page.media['logo.jpg']) }}" alt="LOGO ALT FIXME" /></a>
+        <menu class="nav__links">
+            <li>
+                <a class="navlink {{ current_page|e }}" href="{{ base_url_relative }}/#sluzby">Služby</a>
             </li>
-        {% endfor %}
-    {% endif %}
-    {% for mitem in site.menu %}
-        <li>
-            <a href="{{ mitem.url|e }}">
-                {% if mitem.icon %}<i class="fa fa-{{ mitem.icon|e }}"></i>{% endif %}
-                {{ mitem.text|e }}
-            </a>
-        </li>
-    {% endfor %}
-</ul>
+            {% for p in pages.children.visible %}
+                {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+                {% if p.route != '/' %}
+                    {% if p.children.visible.count == 0 %}
+                        <li>
+                            <a class="navlink {{ current_page|e }}" href="{{ p.url|e }}">{{ p.menu|e }}</a>
+                        </li>
+                    {% else %}
+                        <li class="has-children">
+                            <a class="navlink {{ current_page|e }}" href="{{ p.url|e }}">{{ p.menu|e }}</a>
+                        </li>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+        </menu>
+        <button class="fa fa-bars hamburger menu"></button>
+    </nav>
+<div class="overlay">
+    <a class="close">&times</a>
+    <div class="overlay__content">
+        <ul>
+            {% for p in pages.children.visible %}
+                {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
+                {% if p.children.visible.count == 0 %}
+                    <li>
+                        <a class="navlink {{ current_page|e }}" href="{{ p.url|e }}">{{ p.menu|e }}</a>
+                    </li>
+                {% else %}
+                    <li class="has-children">
+                        <a class="navlink {{ current_page|e }}" href="{{ p.url|e }}">{{ p.menu|e }}</a>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+

@@ -1,5 +1,21 @@
 {% extends 'partials/base.html.twig' %}
 
 {% block content %}
-    {{ page.content|raw }}
+<div class="parallax"> 
+        {% include 'partials/navigation.html.twig' %}
+            <div class="banner__wrapper">
+                <div class="banner-grid">
+                    <h1 class="banner__main-text word">Reborn<b>K</b></h1>
+                    <h2 class="banner__secondary-text word word-delay">Recyklujeme materiály, které by jinak skončily na skládce, a dáváme jim nový život</h2>
+                </div>
+            </div>
+    <div class="content-outer"> 
+            <div class="content-inner">
+                <section id="body">
+                    <div class="wrapper padding" id="parallax" >
+                        <div class="pagecontent" style="background-color:beige;">
+                            {{ page.content|raw }}
+                        </div>
+                    </div>
+                </section>
 {% endblock %}

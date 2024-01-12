@@ -1,0 +1,94 @@
+:root {
+    --color-light: #ffffff;
+    --color-dark: #000000;
+    --base-background-color: #1D1D1D;
+    --base-highlight: #824DF4;
+    --background-highlight: #2A2A2A;
+    scroll-behavior: smooth;
+}
+
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    overflow-x: hidden;
+    perspective: 1px;
+    -webkit-perspective: 1px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    
+}
+
+html, body { height: auto }
+
+div.parallax {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -webkit-overflow-scrolling: touch;
+}
+
+div.parallax:after {
+    background-image: url("../images/rebornk-background-texture.jpg");
+    opacity: 0.4;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    top: -250px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+    content: "";
+    transform: translateZ(-1px) scale(2);
+    -webkit-transform: translateZ(-1px) scale(2);
+}
+
+div.content-outer {
+    width: 100%;
+    perspective: 2px;
+    -webkit-perspective: 2px;
+        height: fit-content;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        /* background-image: url("../images/transition-page-after.png"); */
+        height: 300px;
+        position: absolute;
+        background-position: bottom;
+    }
+
+
+div.content-inner {
+    font-size: 13pt;
+    line-height: 1.40em;
+    padding-top: 100px;
+    margin: 0px auto;
+    content: "";
+    position: absolute;
+    bottom: -200px;
+    height: 200px;
+    width: 100%;
+    background-color: var(--color-light);
+}
+/*
+@media screen and (max-width: 1000px) {
+    div.parallax:after {
+        background-image: url("../images/Hero-Section-tablet.jpg");
+    }
+}
+  
+@media screen and (max-width: 500px) {
+    div.parallax:after {
+        background-image: url("../images/Hero-Section-mobile.jpg");
+    }
+}
+  */

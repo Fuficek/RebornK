@@ -17,6 +17,10 @@
     {% do assets.addCss('https://unpkg.com/purecss@1.0.0/build/pure-min.css', 100) %}
     {% do assets.addCss('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', 99) %}
     {% do assets.addCss('theme://css/custom.css', 98) %}
+    {% do assets.addCss('theme://css/parallax.css', 97) %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200;0,8..60,300;0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;0,8..60,800;0,8..60,900;1,8..60,200;1,8..60,300;1,8..60,400;1,8..60,500;1,8..60,600;1,8..60,700;1,8..60,800;1,8..60,900&display=swap" rel="stylesheet">
 {% endblock %}
 
 {% block javascripts %}
@@ -30,33 +34,13 @@
 </head>
 <body id="top" class="{{ page.header.body_classes|e }}">
 
-{% block header %}
-    <div class="header">
-        <div class="wrapper padding">
-            <a class="logo left" href="{{ home_url|e }}">
-                <i class="fa fa-rebel"></i>
-                {{ config.site.title|e }}
-            </a>
-            {% block header_navigation %}
-            <nav class="main-nav">
-                {% include 'partials/navigation.html.twig' %}
-            </nav>
-            {% endblock %}
-        </div>
-    </div>
-{% endblock %}
-
 {% block body %}
-    <section id="body">
-        <div class="wrapper padding">
         {% block content %}{% endblock %}
-        </div>
-    </section>
 {% endblock %}
 
 {% block footer %}
     <div class="footer text-center">
-        <div class="wrapper padding">
+        <div class="wrapper padding" style="background-color:beige;">
             <p><a href="https://getgrav.org">Grav</a> was <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="https://trilby.media">Trilby Media, LLC</a>.</p>
         </div>
     </div>

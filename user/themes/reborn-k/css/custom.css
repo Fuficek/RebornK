@@ -1,175 +1,220 @@
-/* Core Stuff */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+/* Path: user/themes/reborn-k/css/custom.css */
+
+
+:root {
+    --color-light: #FAFAFA;
+    --color-dark: #000000;
+    --color-primary: #377D00;
+    --color-secondary: #F8B23C;
+    /* Colored peaks colors */
+    --peaks-color-1: #EDF4E7;
+    --peaks-color-2: #DBEACF;
+    --peaks-color-3: #C9DFB7;
+    --peaks-color-4: #B7D5A0;
+    --peaks-color-5: #A5CA89;
+    --peaks-color-6: #93BF72;
+    --peaks-color-7: #80B55B;
+    --peaks-color-8: #6CAA44;
+    --peaks-color-9: #58A02A;
+    /* gradient variables */
+    --sipka-gradient: linear-gradient(271deg, #8E5A00 0%, #F8B23C 97.42%);
+    --section-gradient: linear-gradient(180deg, #377D00 0%, #125D01 100%);
+    scroll-behavior: smooth;
+    --serif: 'Source Serif 4', serif;
 }
 
-body {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #606d6e;
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #454B4D;
-}
 
-a {
-    color: #1F8CD6;
-    text-decoration: none;
-}
+/*-------------------- NAVBAR -------------------------*/
 
-a:hover {
-    color: #175E91;
-}
-
-pre {
-    background: #F0F0F0;
-    margin: 1rem 0;
-    border-radius: 2px;
-}
-
-blockquote {
-    border-left: 10px solid #eee;
-    margin: 0;
-    padding: 0 2rem;
-}
-
-/* Utility Classes */
-.wrapper {
-    margin: 0 3rem;
-}
-
-.padding {
-    padding: 3rem 1rem;
-}
-
-.left {
-    float: left;
-}
-
-.right {
-    float: right
-}
-
-.text-center {
-    text-align: center;
-}
-
-.text-right {
-    text-align: right;
-}
-
-.text-left {
-    text-align: left;
-}
-
-/* Content Styling */
-.header .padding {
-    padding: 1rem 0;
-}
-
-.header {
-    background-color: #1F8DD6;
-    color: #eee;
-}
-
-.header a {
-    color: #fff;
-}
-
-.header .logo {
-    font-size: 1.7rem;
-    text-transform: uppercase;
-}
-
-.footer {
-    background-color: #eee;
-}
-
-/* Menu Settings */
-.main-nav ul {
-    text-align: center;
-    letter-spacing: -1em;
+.navbar{
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 1rem;
+    align-items: center;
+  }
+  
+  .nav__links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
     margin: 0;
     padding: 0;
+  }
+  .nav__links li{
+    list-style: none;
+  }
+  .navlink{
+    text-decoration: none;
+  }
+  .navlink:hover{
+  }
+  
+  .nav__links li:last-of-type .navlink{
+  }
+  .active{
+    /* if needed add styles for the current active link, the code is ready for it*/
+  }
+        /* Mobile Nav */
+      .page-navbar__hamburger {
+        padding: 0;
+        border: none;
+        display: none;
+        margin-right: 20px;
+        cursor: pointer;
+        font-family: Icons;
+        font-size: 2.7em;
+        color: var(--primary);
+        background-size: 100%;
+        background-repeat: repeat;
+      }
+        .menu {
+          display: none;
+          margin-left: 1rem;
+          padding: 9px 25px;
+          border: none;
+          border-radius: 50px;
+          cursor: pointer;
+          transition: background-color 0.3s ease 0s;
+          background-color: transparent;
+        }
+        
+        .menu:hover{
+        }
+      
+        .overlay {
+          height: 100%;
+          width: 0;
+          position: fixed;
+          z-index: 1000;
+          left: 0;
+          top: 0;
+          background-color: var(--background-highlight);
+          overflow-x: hidden;
+          transition: width 0.5s ease 0s;
+        }
+        .overlay ul{
+          list-style-type: none;
+        }
+        .overlay--active {
+          width: 100%;
+        }
+        
+        .overlay__content, .overlay__content ul {
+          display: flex;
+          height: 100vh;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+        
+        .overlay li a {
+          padding: 15px;
+          font-size: 36px;
+          display: block;
+          transition: color 0.3s ease 0s;
+        }
+        
+        .overlay li a:hover,
+        .overlay li a:focus {
+          cursor: pointer;
+        }
+        .overlay .close {
+          position: absolute;
+          top: 20px;
+          right: 45px;
+          font-size: 60px;
+          color: var(--texthighlight);
+          transition: all ease-in-out 0.3s;
+        }
+  
+        .overlay .close:hover{
+          text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+          color: #ffffff;
+          animation: shake 250ms 2 ease-in;
+          -moz-animation: shake 150ms 2 linear;
+          -webkit-animation: shake 150ms 2 linear;
+          -o-animation: shake 150ms 2 linear;
+  
+        }
+      .overlay ul{
+        padding: 0;
+      }
+        .overlay .active:hover{
+          border-radius: 0;
+        }
+        .overlay .navlink{
+          transition: all ease-in-out 0.3s;
+        }
+        .overlay .navlink:hover{
+          background-color: transparent;
+          font-size: 3em;
+          text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+        }
+  
+        /* overlay */
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  /* ==== 1080 px ==== */ 
+  @media only screen and (max-width: 1380px) {
+    .nav__links
+     {
+      display: none;
+    }
+    .menu {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .active{
+        /* if needed add styles for the current active link, the code is ready for it*/
+    }
+  }
+
+  /* hero section */
+
+  .banner__wrapper {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-nav ul li {
-    display: inline-block;
-    letter-spacing: normal;
+.banner__wrapper .banner-grid *{
+  text-align: center;
+  font-family: var(--serif);
+}
+.banner__wrapper .banner-grid h1{
+  font-size: 8.78131rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
-.main-nav ul li a {
-    position: relative;
-    display: block;
-    line-height: 45px;
-    color: #fff;
-    padding: 0 20px;
-    white-space: nowrap;
+.banner__wrapper .banner-grid h1 b{
+  color: var(--color-primary);
+  font-size: 13.172rem;
+  font-weight: 400;
+  line-height: normal;
 }
-
-.main-nav > ul > li > a {
-    border-radius: 2px;
-}
-
-/*Active dropdown nav item */
-.main-nav ul li:hover > a {
-    background-color: #175E91;
-}
-
-/* Selected Dropdown nav item */
-.main-nav ul li.selected > a {
-    background-color: #fff;
-    color: #175E91;
-}
-
-/* Dropdown CSS */
-.main-nav ul li {position: relative;}
-
-.main-nav ul li ul {
-    position: absolute;
-    background-color: #1F8DD6;
-    min-width: 100%;
-    text-align: left;
-    z-index: 999;
-
-    display: none;
-}
-.main-nav ul li ul li {
-    display: block;
-}
-
-/* Dropdown CSS */
-.main-nav ul li ul ul {
-    left: 100%;
-    top: 0;
-}
-
-/* Active on Hover */
-.main-nav li:hover > ul {
-    display: block;
-}
-
-/* Child Indicator */
-.main-nav .has-children > a {
-    padding-right: 30px;
-}
-.main-nav .has-children > a:after {
-    font-family: FontAwesome;
-    content: '\f107';
-    position: absolute;
-    display: inline-block;
-    right: 8px;
-    top: 0;
-}
-
-.main-nav .has-children .has-children > a:after {
-    content: '\f105';
+.banner__wrapper .banner-grid p{
+  font-size: 1.59588rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--BLACK, #000);
+  text-align: center;
 }
