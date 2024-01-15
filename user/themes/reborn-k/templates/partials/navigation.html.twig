@@ -1,10 +1,7 @@
 
     <nav class="navbar">
-        <a href="{{ home_url }}" class="navbar-brand mr-10"><img src="{{ url(page.media['logo.jpg']) }}" alt="LOGO ALT FIXME" /></a>
+        <a href="{{ home_url }}" class="navbar-brand"><img src="{{ url('theme://images/logo-navbar.png') }}" alt="LOGO ALT FIXME" /></a>
         <menu class="nav__links">
-            <li>
-                <a class="navlink {{ current_page|e }}" href="{{ base_url_relative }}/#sluzby">Služby</a>
-            </li>
             {% for p in pages.children.visible %}
                 {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
                 {% if p.route != '/' %}
@@ -19,7 +16,9 @@
                     {% endif %}
                 {% endif %}
             {% endfor %}
-
+                        <li>
+                <a class="navlink" href="http://www.eshoprebornk.com/">Eshop</a>
+            </li>
         </menu>
         <button class="fa fa-bars hamburger menu"></button>
     </nav>

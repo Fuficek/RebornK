@@ -2,7 +2,8 @@
 
 
 :root {
-    --color-light: #FAFAFA;
+    --color-light: #f0f0f0;
+    --color-light-highlight: #ffffff; 
     --color-dark: #000000;
     --color-primary: #377D00;
     --color-secondary: #F8B23C;
@@ -22,6 +23,7 @@
     scroll-behavior: smooth;
     --serif: 'Source Serif 4', serif;
     --inter: 'Inter', sans-serif;
+    --miriam: 'Miriam Libre', sans-serif;
 }
 html,
 body {
@@ -29,6 +31,7 @@ body {
   margin: 0px;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-smooth: 1em;
 }
 
 /* FONT FACES */
@@ -54,9 +57,18 @@ body {
 .bold{
   font-weight: 700;
 }
+.regular{
+  font-weight: 400;
 
+}
+.light{
+  font-weight: 300;
+}
 .wh{
   color: var(--color-light);
+}
+.bold .wh{
+  color: var(--color-light-highlight);
 }
 .bk{
   color: var(--color-dark);
@@ -73,10 +85,15 @@ body {
     height: 90px;
     justify-content: space-between;
     flex-direction: row;
-    padding: 1rem;
+    padding: 1rem 4rem;
     align-items: center;
   }
-  
+  .navbar-brand{
+    height: calc(90px - 2rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .nav__links{
     display: flex;
     justify-content: flex-end;
@@ -84,17 +101,29 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    gap: 50px;
   }
   .nav__links li{
     list-style: none;
   }
   .navlink{
+    color: var(--color-dark);
     text-decoration: none;
+    text-align: center;
+    font-family: var(--miriam);
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 1.59444rem */
   }
   .navlink:hover{
   }
   
   .nav__links li:last-of-type .navlink{
+    border-radius: 2.15919rem;
+    background: var(--color-primary, #377D00);
+    padding: 0.66669rem 1.83331rem;
+    color: var(--color-light);
   }
   .active{
     /* if needed add styles for the current active link, the code is ready for it*/
