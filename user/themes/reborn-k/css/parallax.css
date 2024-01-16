@@ -60,7 +60,7 @@ div.content-outer {
         height: fit-content;
         background-repeat: no-repeat;
         background-size: 100%;
-        background-image: url("../images/peaks.png");
+        background-image: url("../images/peaks.svg");
         height: 369px;
         position: absolute;
         background-position: bottom;
