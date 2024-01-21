@@ -12,6 +12,7 @@ html, body {
     padding: 0px;
     margin: 0px;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
@@ -91,3 +92,5 @@ div.content-inner {
     }
 }
   */
+
+  

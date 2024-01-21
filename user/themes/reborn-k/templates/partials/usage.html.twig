@@ -1,36 +1,31 @@
-<div class="scroll_container">
-        <div class="sticky_wrap">
-            <div class="horizontal_scroll">
-                <div class="scroll_contents red">
-                    <h2 class="left">Hello</h2>
-                </div>
-                <div class="scroll_contents yellow"></div>
-                <div class="scroll_contents green"></div>
-                <div class="scroll_contents blue">
-                    <h2 class="right">Goodbye</h2>
-                </div>
-            </div>
-        </div>
+<div class="scroll-container">
+    <div class="scroll-content">
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+    </div>
 </div>
-<script>
-const stickySections = [...document.querySelectorAll('.sticky_wrap')]
 
-window.addEventListener('scroll', (e) => {
-    for (let i = 0; i < stickySections.length; i++) {
-        transform(stickySections[i])
+<style>
+    .scroll-container {
+        width: 100%;;
+        height: 100vh;
+        overflow-x: scroll;
     }
-})
 
-function transform(section) {
-
-    const offsetTop = section.parentElement.offsetTop;
-
-    const scrollSection = section.querySelector('.horizontal_scroll')
-
-    let percentage = ((window.scrollY - offsetTop) / window.innerHeight) * 100;
-
-    percentage = percentage < 0 ? 0 : percentage > 300 ? 300 : percentage;
-
-    scrollSection.style.transform = `translate3d(${-(percentage)}vw, 0, 0)`
-}
-</script>
+    .scroll-content {
+        width: 200%; /* Adjust this value as needed */
+        white-space: nowrap;
+    }
+    .frame{
+        width: 50%;
+        height: 100vh;
+        display: inline-block;
+        background: #ccc;
+    }
+</style>

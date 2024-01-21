@@ -1,0 +1,94 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}
+
+
+{% block content %}
+<div class="onas-wrapper">
+    <div class="onas-container">
+        <div class="onas-div">
+            <div class="onas-div-text">
+                <h1 class="font header bold bk">Náš Příběh</h1>
+                <p class="font sm regular">Jak se z nápadu ze skládky stal fungující obchod?</p>
+            </div>
+        </div>
+        <div class="onas-div">
+            <div class="date wh font sm">2013</div>
+            <div class="onas-div-text">
+                <p class="font sm regular">Filozofie naší společnosti má své kořeny v dětství zakladatele Františka Kessnera, který se vždy snažil hledat způsoby, jak využít věci, které už nikdo nechce a přeměnit je v něco, co má smysl a potenciál. </p>
+                <p class="font sm regular">Díky nenáhodné náhodě se na něj usmálo štěstí právě tam, kde by to každý čekal asi nejméně - na skládce.</p>
+                <p class="font sm light">„Zaznamenal jsem, že pěnový polypropylen vykazuje vynikající vlastnosti a hned jsem pochopil, že jsem na skládce narazil na to, co jsem dlouhé roky hledal„</p>
+            </div>
+            <img src="http://placehold.it/900x510" alt="placeholder"></img>
+        </div>
+        <div class="onas-div iotos">
+            <div class="date wh font sm">2014</div>
+            <div class="onas-div-text">
+                <p class="font sm regular">Z polypropylenu jsem začali vyrábět kuličky,  díky kterým jsem mohli začít s produkcí hotových produktů, které si teď může zakoupit opravdu každý, a které jsou schopny ulehčit práci, stejně jako zprostředkovat spoustu zábavy.</p>
+                <p class="font sm regular">Díky spolupráci profesionálů s otevřeným srdcem i myslí se z původní myšlenky, která se podobala sněhové vločce s nejistou existencí, stala neustále rostoucí sněhová koule, která už se na své cestě nenechá jen tak zastavit.</p>
+            </div>
+            <img src="http://placehold.it/900x510" alt="placeholder"></img>
+        </div>
+        <div class="onas-div">
+            <div class="date wh font sm">2013</div>
+            <div class="onas-div-text">
+                <p class="font sm regular">Náš paddleboard z RebornK materiálu byl oceněný porotou soutěže, konané v roce 2018 v Amsterdamu, o nejvíce recyklovaný výrobek Evropy..</p>
+            </div>
+            <img src="http://placehold.it/900x510" alt="placeholder"></img>
+        </div>
+        <div class="onas-div iotos">
+            <div class="date wh font sm">2014</div>
+            <div class="onas-div-text">
+                <p class="font sm light">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <img src="http://placehold.it/900x510" alt="placeholder"></img>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="182" height="1743" viewBox="0 0 220 1673" fill="none">
+        <path id="animatedPath" d="M5.50293 6.21875H90.6074C151.473 6.3468 175.686 25.2094 176.275 86.2854C176.275 86.2854 176.275 380.176 176.275 444.013V1737.5" stroke="#2D6601" stroke-width="10.7211" stroke-linecap="round"/>
+    </svg>
+    </div>
+</div>
+
+
+
+
+<script>
+// Function to animate the SVG path based on scroll position
+function animatePathOnScroll() {
+    // Get the scroll position
+    const scrollPosition = window.scrollY;
+
+    // Calculate the progress of the animation based on scroll position
+    const windowHeight = window.innerHeight;
+    const svgElement = document.querySelector('svg');
+    const svgRect = svgElement.getBoundingClientRect();
+    const svgTop = svgRect.top;
+    const svgHeight = svgRect.height;
+    const visibleThreshold = svgHeight * 0.5;
+    const progress = Math.max(0, (scrollPosition - svgTop + visibleThreshold) / (windowHeight + svgHeight));
+
+    // Update the path data based on the progress
+    const animatedPath = document.getElementById('animatedPath');
+    const pathLength = animatedPath.getTotalLength();
+    animatedPath.style.strokeDasharray = pathLength;
+    animatedPath.style.strokeDashoffset = pathLength - progress * pathLength;
+
+    // Request the next animation frame
+    requestAnimationFrame(animatePathOnScroll);
+}
+
+// Add the scroll event listener to trigger the animation on scroll
+window.addEventListener('scroll', animatePathOnScroll);
+
+// Initial call to set the initial state of the path
+animatePathOnScroll();
+
+// Smoothly transition the drawing of the path
+const animatedPath = document.getElementById('animatedPath');
+animatedPath.style.transition = 'stroke-dashoffset 0.18s ease-in';
+</script>
+{% endblock %}
+
