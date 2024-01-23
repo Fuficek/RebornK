@@ -1,0 +1,8 @@
+<div class="vlastnost-wrapper circle orbit">
+        {% for media in page.media %}
+            <img src="{{ media.url }}" alt="{{ media.title }}" class="vlastnost-image" />
+        {% else %}
+            <img src="http://placehold.it/750x500" alt="placeholder image" class="vlastnost-image placeholder" />
+        {% endfor %}
+    <h5 class="vlastnost-title font sm light">{{ page.title }}</h5>
+</div>

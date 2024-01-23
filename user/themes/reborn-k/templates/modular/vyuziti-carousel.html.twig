@@ -1,0 +1,31 @@
+<div class="scroll-container">
+    <div class="scroll-content">
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+        <div class="frame"></div>
+    </div>
+</div>
+
+<style>
+    .scroll-container {
+        width: 100%;;
+        height: 100vh;
+        overflow-x: scroll;
+    }
+
+    .scroll-content {
+        width: 200%; /* Adjust this value as needed */
+        white-space: nowrap;
+    }
+    .frame{
+        width: 50%;
+        height: 100vh;
+        display: inline-block;
+        background: #ccc;
+    }
+</style>

@@ -265,6 +265,9 @@ body {
   text-align: center;
   font-family: var(--serif);
 }
+.banner__wrapper .banner-grid img{
+  max-width: 600px;
+}
 .banner__wrapper .banner-grid h1{
   font-size: 8.78131rem;
   font-style: normal;
@@ -300,6 +303,7 @@ body {
   padding: 0 18rem;
   margin: 0 auto;
   height: 100vh;
+  gap: 50px;
 }
 
 /* mainpage - layout - 1*/
@@ -337,23 +341,39 @@ body {
 }
 
 .mp-content p{
-  color: #FFF;
-  font-family: Inter;
   font-size: 1.25rem;
-  font-style: normal;
+}
+.mp-content h3{
+  font-size: 3rem;
   font-weight: 400;
-  line-height: normal;
+  padding: 0;
+  margin: 0;
+}
+.mp-content a{
+  display: flex;
+  padding: 1.08331rem 5.41669rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.83331rem;
+  border-radius: 2rem;
+  background: var(--section-gradient);
+  max-width: fit-content;
+  margin-top: 1rem;
+  text-decoration: none;
+  color: var(--color-light);
 }
 
 
 .mp-image{
   max-height: 80%;
   width: auto;
+  border-radius: 1.975rem;
 }
 
 .scroll_container {
   height: 400vh;
 }
+
 
 .horizontal_scroll {
   position: absolute;
@@ -541,7 +561,7 @@ h2 {
   gap: -50rem;
 }
 
-.circle img {
+.center img {
   max-width: 30rem;
 }
 
@@ -549,3 +569,19 @@ h2 {
   margin-top: -35px;
 }
 
+
+
+
+.vlastnost-wrapper{
+  display: flex;
+  flex-direction: column;	
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+}
+
+.vlastnost-image{
+  width: 80%;
+  height: auto;
+  margin-bottom: -2.5rem;
+}
