@@ -349,6 +349,7 @@ body {
   padding: 0;
   margin: 0;
 }
+
 .mp-content a{
   display: flex;
   padding: 1.08331rem 5.41669rem;
@@ -374,7 +375,7 @@ body {
   height: 400vh;
 }
 
-
+/* OLD HORIZONTAL SCROLL
 .horizontal_scroll {
   position: absolute;
   top: 0;
@@ -428,7 +429,7 @@ h2 {
   margin-top: 85vh;
   margin-right: 5vw;
 }
-
+*/
 
 
 /* gallery styles */
