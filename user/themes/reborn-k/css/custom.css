@@ -596,7 +596,7 @@ h2 {
 }
 .glide-carousell-wrapper{
   width: 100%;
-  height: 105vh;
+  height: 105dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -614,4 +614,29 @@ h2 {
   margin: 0;
   left: 10%;
   filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.8));
+}
+
+.mp-media-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mp-media-container img {
+  flex: 1;
+  object-fit: cover;
+  max-height: 40dvh; 
+}
+.mp-media-container img:nth-of-type(2) {
+  transform: translate(3.975rem, -3.975rem);
+}
+
+.cta-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100dvw;
+
+  padding: 0 10rem;
 }
