@@ -1,5 +1,5 @@
 <div class="circle-container" id="vlastnosti">
-    <div class="circle center " id="vlastnosti-nadpis">
+    <div class="center circle-header " id="vlastnosti-nadpis">
         <img src="{{ url('theme://images/logo.png')|e }}" alt="" class="logo">
         <h4 class="font md bold"> Vlastnosti materiálu </h4>
     </div>
@@ -12,8 +12,8 @@
     function updateElementPositions() {
         var elems = document.getElementsByClassName('orbit');
         
-        // Check if the screen width is greater than 1000px
-        if (window.innerWidth > 1000) {
+        // Check if the screen width is greater than 900px
+        if (window.innerWidth > 900) {
             var increase = Math.PI * 2 / elems.length;
             var centerX = window.innerWidth / 2; // Calculate the center X coordinate
             var centerY = window.innerHeight / 2; // Calculate the center Y coordinate
@@ -31,6 +31,8 @@
                 elem.style.left = x + 'px';
                 elem.style.top = y + 'px';
                 angle += increase;
+                var centerElement = document.getElementById("vlastnosti-nadpis");
+                centerElement.classList.add("center");
             }
         } else {
             for (var i = 0; i < elems.length; i++) {
@@ -38,9 +40,8 @@
                 elem.style.position = 'inherit';
                 elem.style.left = 'auto';
                 elem.style.top = 'auto';
-                var elementek = document.getElementById("vlastnosti-nadpis");
-                elementek.classList.remove("center");
-                elementek.classList.remove("circle");
+                var centerElement = document.getElementById("vlastnosti-nadpis");
+                centerElement.classList.remove("center");
             }
         }
     }
