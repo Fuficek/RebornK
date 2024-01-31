@@ -1,5 +1,5 @@
 <div class="circle-container" id="vlastnosti">
-    <div class="circle center">
+    <div class="circle center " id="vlastnosti-nadpis">
         <img src="{{ url('theme://images/logo.png')|e }}" alt="" class="logo">
         <h4 class="font md bold"> Vlastnosti materiálu </h4>
     </div>
@@ -11,29 +11,43 @@
 <script>
     function updateElementPositions() {
         var elems = document.getElementsByClassName('orbit');
-        var increase = Math.PI * 2 / elems.length;
-        var centerX = window.innerWidth / 2; // Calculate the center X coordinate
-        var centerY = window.innerHeight / 2; // Calculate the center Y coordinate
-        var offsetX = 50; // X center offset in pixels
-        var offsetY = -40; // Y center offset in pixels
-        var radiusX = 500; // Adjust the X radius as needed
-        var radiusY = 350; // Adjust the Y radius as needed
-        var angle = -60, elem;
+        
+        // Check if the screen width is greater than 1000px
+        if (window.innerWidth > 1000) {
+            var increase = Math.PI * 2 / elems.length;
+            var centerX = window.innerWidth / 2; // Calculate the center X coordinate
+            var centerY = window.innerHeight / 2; // Calculate the center Y coordinate
+            var offsetX = 50; // X center offset in pixels
+            var offsetY = -40; // Y center offset in pixels
+            var radiusX = 500; // Adjust the X radius as needed
+            var radiusY = 350; // Adjust the Y radius as needed
+            var angle = -60, elem;
 
-        for (var i = 0; i < elems.length; i++) {
-            elem = elems[i];
-            var x = centerX - elem.offsetWidth / 2 + radiusX * Math.cos(angle) - elem.offsetWidth / 2 + offsetX;
-            var y = centerY - elem.offsetHeight / 2 + radiusY * Math.sin(angle) - elem.offsetHeight / 2 + offsetY;
-            elem.style.position = 'absolute';
-            elem.style.left = x + 'px';
-            elem.style.top = y + 'px';
-            angle += increase;
+            for (var i = 0; i < elems.length; i++) {
+                elem = elems[i];
+                var x = centerX - elem.offsetWidth / 2 + radiusX * Math.cos(angle) - elem.offsetWidth / 2 + offsetX;
+                var y = centerY - elem.offsetHeight / 2 + radiusY * Math.sin(angle) - elem.offsetHeight / 2 + offsetY;
+                elem.style.position = 'absolute';
+                elem.style.left = x + 'px';
+                elem.style.top = y + 'px';
+                angle += increase;
+            }
+        } else {
+            for (var i = 0; i < elems.length; i++) {
+                elem = elems[i];
+                elem.style.position = 'inherit';
+                elem.style.left = 'auto';
+                elem.style.top = 'auto';
+                var elementek = document.getElementById("vlastnosti-nadpis");
+                elementek.classList.remove("center");
+                elementek.classList.remove("circle");
+            }
         }
     }
-    window.addEventListener('load', function() {
+
+    window.addEventListener('load', function () {
         updateElementPositions();
     });
-
 
     // Call the function on window resize
     window.addEventListener('resize', updateElementPositions);
