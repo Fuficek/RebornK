@@ -609,7 +609,7 @@ body {
 
 @media (max-width: 900px) {
   .mp-layout {
-    flex-direction: column;
+    flex-direction: column; /*important */
     justify-content: center;
     align-items: center;
     padding: 40px 20px;
