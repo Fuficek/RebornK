@@ -1,0 +1,12 @@
+<section class="onas-div">
+    <div class="date wh font sm">{{ page.title }}</div>
+    {# Placeholder image for content (19:6 res) #}
+    {% for media in page.media %}
+        <img src="{{ media.url }}" alt="{{ media.title }}" class="" />
+    {% else %}
+        <img src="http://placehold.it/900x510" alt="placeholder image" class="" />
+    {% endfor %}
+    <div class="onas-div-text">
+        {{ page.content|raw}}
+    </div>
+</section>
