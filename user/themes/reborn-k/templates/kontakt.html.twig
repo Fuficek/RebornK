@@ -1,0 +1,69 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .footer-container {
+            margin-top: 0rem !important;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}   
+    <div class="kontakt-container font">
+        {% include 'partials/navigation.html.twig' %}
+        <div class="kontakt-content">
+            <section class="kontakt-sub-container kontakt-text">
+                <div class="kontakt-info">
+                    <div class="kontakt-osoba">
+                        <img class="osoba-img" src="{{ page.media['kessner.png'].url }}" alt="Kontaktní osoba">
+                        <div class="osoba-info">
+                            <h3 >František Kessner</h3>
+                            <p class="sm">+420 603 472 183</p>
+                            <a class="sm" href:"mailto:info@rebornk.com">info@rebornk.com</p>
+                        </div>
+                    </div>
+                    <div class="kontakt-socials">
+                        <div class="social-container">
+                            <img src="{{ page.media['facebook.png'].url }}" alt="Facebook">
+                            <a class="font sm bk" href="">@rebornk</a>
+                        </div>
+                        <div class="social-container">
+                            <img src="{{ page.media['instagram.png'].url }}" alt="Instagram">
+                            <a class="font sm bk" href="">@rebornk_official</a>
+                        </div>
+                    </div>
+                    <div class="kontakt-adress-info">
+                        <h3>Green Planet Investment s.r.o</h3>
+                        <p>Piletická 61/36a</p>
+                        <p>Hradec Králové 500 03</p>
+                        <p>Česká republika</p>
+                        <p>IČO: 275 388 00</p>
+                        <p>DIČ: CZ 275 388 00</p>
+                    </div>
+            </section>
+            <section class="kontakt-sub-container kontakt-form">
+                <h2 class="font bk lg bold">Kontaktujte nás!</h2>
+                <form class="kontakt-form font sm" action="kontakt" method="post">
+                    <div class="form-group">
+                        <label for="name">Jméno a Příjmení</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Zpráva</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Odeslat</button>
+            </section>
+        </div>
+    </div>
+{% endblock %}

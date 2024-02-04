@@ -339,7 +339,7 @@ body {
 }
 
 /* BUTTON */
-.mp-content a, .cta-wrapper a{
+.mp-content a, .cta-wrapper a, button{
   display: flex;
   padding: 1.08331rem 5.41669rem;
   justify-content: center;
@@ -351,6 +351,7 @@ body {
   margin-top: 1rem;
   text-decoration: none;
   color: var(--color-light);
+  border: none;
 }
 /* BUTTON alternative style */
 .sg a, .cta-wrapper a{
@@ -591,6 +592,122 @@ body {
   flex-direction: row-reverse;
 }
 
+/* -------------------- Kontakt stránka -------------------------*/
+
+.kontakt-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  padding-bottom: 3rem;
+  background: var(--color-light);
+  background-image: url("../images/background-texture-transparent.png");
+}
+
+.kontakt-container *{
+  min-width: 0;
+}
+
+.kontakt-content{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  padding: 2rem 0;
+}
+.kontakt-sub-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 40%;
+  padding: 2rem 0;
+}
+
+.kontakt-sub-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.kontakt-form input, .kontakt-form textarea{
+  border-radius: 1rem;
+  padding: 1.25rem;
+  border: var(--color-primary) 2px solid;
+  margin: 0;
+  width: 100%;
+}
+.kontakt-form label{
+  margin-left: 1rem;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 220px;
+  width: 60%;
+}
+
+.kontakt-osoba{
+  display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+.kontakt-osoba h3{
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.osoba-img{
+  border-radius: 50%;
+}
+
+.kontakt-socials{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.social-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+.social-container a{
+  text-decoration: none;
+}
+
+.kontakt-adress-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.kontakt-adress-info p{
+  margin: 0;
+  padding: 0;
+}
+
+
 /* responzvita */
 @media (max-width: 980px) {
   .mp-layout {
@@ -650,3 +767,7 @@ body {
   }
   
 }
+
+
+
+
