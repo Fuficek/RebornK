@@ -1,0 +1,71 @@
+<div class="onas-wrapper">
+    <div class="onas-container">
+        <div class="onas-div">
+            <div class="onas-div-text">
+                <h1 class="font header bold bk">Náš Příběh</h1>
+                <p class="font sm regular">Jak se z nápadu ze skládky stal fungující obchod?</p>
+            </div>
+        </div>
+        {% for module in page.collection() %}
+            {{ module.content|raw }}
+        {% endfor %}
+        <svg xmlns="http://www.w3.org/2000/svg" width="182" height="1743" viewBox="0 0 220 1673" fill="none">
+        <path id="animatedPath" d="M5.50293 6.21875H90.6074C151.473 6.3468 175.686 25.2094 176.275 86.2854C176.275 86.2854 176.275 380.176 176.275 444.013V1737.5" stroke="#2D6601" stroke-width="10.7211" stroke-linecap="round"/>
+    </svg>
+    </div>
+</div>
+
+
+
+
+<script>
+// Function to animate the SVG path based on scroll position
+function animatePathOnScroll() {
+    // Get the scroll position
+    const scrollPosition = window.scrollY;
+
+    // Calculate the progress of the animation based on scroll position
+    const windowHeight = window.innerHeight;
+    const svgElement = document.querySelector('svg');
+    const svgRect = svgElement.getBoundingClientRect();
+    const svgTop = svgRect.top;
+    const svgHeight = svgRect.height;
+    const visibleThreshold = svgHeight * 0.5;
+    const progress = Math.max(0, (scrollPosition - svgTop + visibleThreshold) / (windowHeight + svgHeight));
+
+    // Update the path data based on the progress
+    const animatedPath = document.getElementById('animatedPath');
+    const pathLength = animatedPath.getTotalLength();
+    animatedPath.style.strokeDasharray = pathLength;
+    animatedPath.style.strokeDashoffset = pathLength - progress * pathLength;
+
+    // Request the next animation frame
+    requestAnimationFrame(animatePathOnScroll);
+}
+
+// Add the scroll event listener to trigger the animation on scroll
+window.addEventListener('scroll', animatePathOnScroll);
+
+// Initial call to set the initial state of the path
+animatePathOnScroll();
+
+// Smoothly transition the drawing of the path
+const animatedPath = document.getElementById('animatedPath');
+animatedPath.style.transition = 'stroke-dashoffset 0.18s ease-in';
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Wait until the DOM is fully loaded
+
+  // Get all elements with the class ".date"
+  var dateElements = document.getElementsByClassName("date");
+
+  // Check if there are any elements with the class ".date"
+  if (dateElements.length > 0) {
+    // Add the class ".date-last" to the last element with the class ".date"
+    dateElements[dateElements.length - 1].classList.add("date-last");
+  }
+});
+
+
+</script>

@@ -25,6 +25,17 @@
     --inter: 'Inter', sans-serif;
     --miriam: 'Miriam Libre', sans-serif;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: var(--color-light-highlight);
+  background: var(--color-primary);
+}
+
+::selection {
+  color: var(--color-light-highlight);
+  background: var(--color-primary);
+}
+
 html,
 body {
   padding: 0px;
@@ -34,7 +45,7 @@ body {
 
 /* FONT FACES */
 
-.font{
+.font, blockquote p{
   font-family: var(--inter);
   line-height: normal;
   font-weight: 400;
@@ -74,6 +85,23 @@ body {
 /*section gradient*/
 .sg{
   background: var(--section-gradient);
+}
+
+blockquote{
+  background-color: var(--color-light);
+  padding: 3rem;
+  border-radius: 1.975rem;
+  margin: 1.5rem 0;
+  color: var(--color-dark);
+}
+blockquote p{
+  margin:0;
+  padding: 0;
+}
+blockquote p::before, blockquote p::after{
+  content: '"   ';
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 /*-------------------- NAVBAR -------------------------*/
@@ -319,19 +347,19 @@ body {
 }
 
 /* P */
-.mp-content p, .cta-wrapper p{
+.mp-content p, .cta-wrapper p, .onas-container p{
   font-size: 1.25rem;
 }
 
 /* H3 */
-.mp-content h3, .cta-wrapper h3{
+.mp-content h3, .cta-wrapper h3, .onas-container h3{
   font-size: 3rem;
   font-weight: 400;
   padding: 0;
   margin: 0;
 }
 /* H4 */
-.mp-content h4, .cta-wrapper h4{
+.mp-content h4, .cta-wrapper h4, .onas-container h4{
   font-size: 2rem;
   font-weight: 400;
   padding: 0;
@@ -339,7 +367,7 @@ body {
 }
 
 /* BUTTON */
-.mp-content a, .cta-wrapper a, button{
+.mp-content a, .cta-wrapper a, button, .onas-container a{
   display: flex;
   padding: 1.08331rem 5.41669rem;
   justify-content: center;
@@ -568,10 +596,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: var(--color-light) 15px solid;
 }
 
-.date:nth-of-type(3){
-  width:100px;
+.date:last-child{
+  
+}
+
+.date-last {
+  width: 150px !important;
+  border: var(--color-light) 0px solid;
 }
 
 .onas-div{
@@ -591,6 +625,16 @@ body {
 .iotos {
   flex-direction: row-reverse;
 }
+
+.oddelovac {
+  width: 100%;
+  height: fit-content;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url("../images/peaks.svg");
+  height: 369px;
+  background-position: bottom;
+  }
 
 /* -------------------- Kontakt stránka -------------------------*/
 
