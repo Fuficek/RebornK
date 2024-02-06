@@ -1,13 +1,15 @@
 
     <section class="mp-layout iotos sg wh">
-        {# Placeholder image for content (19:6 res) #}
-        {% for media in page.media %}
-            <img src="{{ media.url }}" alt="{{ media.title }}" class="mp-image" />
-        {% else %}
-            <img src="http://placehold.it/500x750" alt="placeholder image" class="mp-image" />
-        {% endfor %}
-        <div class="mp-content">
-            <h2 class="font header bold">{{ page.title }}</h2>
-            {{ page.content|raw}}
+        <div class="mp-layout-container">
+            {# Placeholder image for content (19:6 res) #}
+            {% for media in page.media %}
+                <img src="{{ media.url }}" alt="{{ media.title }}" class="mp-image" />
+            {% else %}
+                <img src="http://placehold.it/500x750" alt="placeholder image" class="mp-image" />
+            {% endfor %}
+            <div class="mp-content">
+                <h2 class="font header bold">{{ page.title }}</h2>
+                {{ page.content|raw}}
+        </div>
         </div>
     </section>
