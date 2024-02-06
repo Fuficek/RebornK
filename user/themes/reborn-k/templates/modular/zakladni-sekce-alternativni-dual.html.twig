@@ -1,15 +1,17 @@
 <section class="mp-layout bk">
-    {# Placeholder image for content (19:6 res) #}
-    <div class="mp-media-container">
-        {% for media in page.media %}
-            <img src="{{ media.url }}" alt="{{ media.title }}" class="mp-image" />
-        {% else %}
-            <img src="http://placehold.it/500x750" alt="placeholder image" class="mp-image" />
-        {% endfor %}
-    </div>
-    {# Content #}
-    <div class="mp-content font">
-        <h2 class="font header bold bk">{{ page.title }}</h2>
-        {{ page.content|raw}}
+    <div class="mp-layout-container">
+            {# Placeholder image for content (19:6 res) #}
+        <div class="mp-media-container">
+            {% for media in page.media %}
+                <img src="{{ media.url }}" alt="{{ media.title }}" class="mp-image" />
+            {% else %}
+                <img src="http://placehold.it/500x750" alt="placeholder image" class="mp-image" />
+            {% endfor %}
+        </div>
+        {# Content #}
+        <div class="mp-content font">
+            <h2 class="font header bold bk">{{ page.title }}</h2>
+            {{ page.content|raw}}
+        </div>
     </div>
 </section>
