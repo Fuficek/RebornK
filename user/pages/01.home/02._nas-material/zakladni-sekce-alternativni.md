@@ -1,6 +1,6 @@
 ---
 title: 'Náš materiál'
-media_order: 'image 13.jpg'
+media_order: RebornK-video.mp4
 ---
 
 ### 100% z odpadu a recyklovatelný
