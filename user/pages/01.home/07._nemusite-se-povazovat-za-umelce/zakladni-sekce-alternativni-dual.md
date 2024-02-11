@@ -3,6 +3,5 @@ title: 'Nemusíte se považovat za umělce'
 media_order: 'image 21.jpg,image 22.jpg'
 ---
 
-### 100% z odpadu a recyklovatelný
-**Pěnový polypropylen** jsme nalezli před 10 lety na skládce. Díky technologiím vyvinutým týmem RebornK nabyl původní odpad nové hodnoty, neboť z něj můžete vytvořit **prakticky cokoliv!**
-[Vlastnosti materiálu](../../#vlastnosti)
+Kromě výtvarníků slouží naše výrobky **vynálezcům, stavařům, zahradníkům, kutilům všeho druhu** či lidem se **zdravotním handicapem** například jako **arteterapie**.
+Zkrátka **pro všechny**, kdo chtějí prostřednictvím **ekologických materiálů** zhmotnit své představy a dát jim přirozený průchod.

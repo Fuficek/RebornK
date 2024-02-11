@@ -65,6 +65,7 @@ body {
 }
 .bold{
   font-weight: 700;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 .regular{
   font-weight: 400;
@@ -93,6 +94,7 @@ blockquote{
   border-radius: 1.975rem;
   margin: 1.5rem 0;
   color: var(--color-dark);
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 blockquote p{
   margin:0;
@@ -119,6 +121,7 @@ blockquote p::before, blockquote p::after{
     display: flex;
     align-items: center;
     justify-content: center;
+    filter: drop-shadow(0px 6px 25px #0000001a);
   }
   .nav__links{
     display: flex;
@@ -141,8 +144,12 @@ blockquote p::before, blockquote p::after{
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 1.59444rem */
+    transition: cubic-bezier(0.23, 1, 0.320, 1) 0.3s all;
   }
   .navlink:hover{
+    color: var(--color-primary);
+    letter-spacing: 2px;
+    font-weight: 600;
   }
   
   .nav__links li:last-of-type .navlink{
@@ -212,6 +219,7 @@ blockquote p::before, blockquote p::after{
           font-size: 36px;
           display: block;
           transition: color 0.3s ease 0s;
+          color: var(--peaks-color-1);
         }
         
         .overlay li a:hover,
@@ -248,7 +256,7 @@ blockquote p::before, blockquote p::after{
         .overlay .navlink:hover{
           background-color: transparent;
           font-size: 3em;
-          text-shadow: 1px 1px 2px black, 0 0 1em black, 0 0 0.2em black;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.377), 0 0 1em rgba(0, 0, 0, 0.308), 0 0 0.2em rgba(0, 0, 0, 0.151);
         }
   
         /* overlay */
@@ -322,6 +330,7 @@ blockquote p::before, blockquote p::after{
   font-size: clamp(2rem, 30vw, 220px);
   font-weight: 400;
   line-height: normal;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 /* hero subheading */
 .banner__wrapper .banner-grid h2{
@@ -331,6 +340,7 @@ blockquote p::before, blockquote p::after{
   line-height: normal;
   color: var(--BLACK, #000);
   text-align: center;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 
 /* -------------------- Mainpage Layout -------------------------*/
@@ -382,6 +392,7 @@ blockquote p::before, blockquote p::after{
   text-decoration: none;
   color: var(--color-light);
   border: none;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 /* BUTTON alternative style */
 .sg a, .cta-wrapper a{
@@ -394,6 +405,8 @@ blockquote p::before, blockquote p::after{
   max-width: 550px;
   max-height: 754px;
   border-radius: 1.975rem;
+  object-fit: fill;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 
 
@@ -493,6 +506,7 @@ blockquote p::before, blockquote p::after{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 
 .vyuziti-heading{
@@ -513,9 +527,13 @@ blockquote p::before, blockquote p::after{
   object-fit: cover;
   max-height: 40dvh; 
 }
-.mp-media-container img:nth-of-type(2) {
-  transform: translate(3.975rem, -3.975rem);
+.mp-media-container img:nth-of-type(1) {
+  transform: translate(-1rem, 1rem);
 }
+.mp-media-container img:nth-of-type(2) {
+  transform: translate(1rem, -2.975rem);
+}
+
 
 /* CTA */
 .cta-wrapper{
@@ -536,6 +554,7 @@ blockquote p::before, blockquote p::after{
   width: 100%;
   padding: 0;
   padding: 2rem 0;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 
 /* Add your styles here */
@@ -574,6 +593,14 @@ blockquote p::before, blockquote p::after{
   align-items: center;
   gap: 20px;
       padding: 0;
+}
+.navigation li a{
+  transition: cubic-bezier(0.23, 1, 0.320, 1) 0.3s all;
+}
+.navigation li a:hover{
+  color: var(--color-primary);
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
 .footer-container .banner__main-text {
@@ -673,6 +700,7 @@ blockquote p::before, blockquote p::after{
   stroke: var(--Highlight-color, #377D00);
   fill: none;
   z-index: -5;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 .onas-div > * {
   width: 40%;
@@ -684,7 +712,7 @@ blockquote p::before, blockquote p::after{
   align-items: center;
   justify-content: space-between;
   width: 1100px;
-  gap: 10rem;
+  gap: 6rem;
   margin-top: 10rem;
   position: relative;
 }
@@ -719,8 +747,13 @@ blockquote p::before, blockquote p::after{
   width: 100%;
   margin: 0 auto;
 }
-.onas-div img{
+.onas-div img, .onas-div blockquote {
   border-radius: 1.75rem;
+  filter: drop-shadow(0px 6px 25px #0000000a);
+}
+.onas-div blockquote {
+  background: linear-gradient(45deg, #52951c 0%, #2c8119 100%);
+  color: var(--color-light);
 }
 
 
@@ -789,7 +822,6 @@ blockquote p::before, blockquote p::after{
   padding: 1.25rem;
   border: var(--color-primary) 2px solid;
   margin: 0;
-  width: 100%;
 }
 .kontakt-form label{
   margin-left: 1rem;
@@ -867,13 +899,30 @@ blockquote p::before, blockquote p::after{
 
   .onas-div{
     flex-direction: column;
+    gap: 2rem;
   }
   .onas-div > *{
     width: 85vw;
   }
-  .date,  .onas-container svg{
+  .onas-container svg{
     display: none;
   }
+  .date {
+    position: unset;
+    width: fit-content !important;
+    border-radius: unset; 
+    aspect-ratio: unset; 
+    background-color: unset; 
+    left: unset; 
+    transform: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    z-index: 2;
+    color: var(--color-dark);
+    padding: 1rem 0rem;
+}
   .onas-container p{
     font-size: 1rem;
   }
@@ -950,6 +999,12 @@ blockquote p::before, blockquote p::after{
          .glide-carousell-wrapper h2 {
            scale: 0.7;
          }
+         .mp-media-container img:nth-of-type(1) {
+          transform: translate(-8rem, 1rem);
+        }
+        .mp-media-container img:nth-of-type(2) {
+          transform: translate(-3rem, -2.975rem);
+        }
 }
 @media (max-width: 750px) {
   .footer-container{
@@ -958,10 +1013,16 @@ blockquote p::before, blockquote p::after{
     align-items: center;
     padding: 2rem 0;
   }
-
+  .mp-media-container img:nth-of-type(1) {
+    transform: translate(-3rem, 1rem);
+  }
+  .mp-media-container img:nth-of-type(2) {
+    transform: translate(-1rem, -2.975rem);
+  }
 }
 
 @media (max-width: 600px) {
+
   .banner-grid {
       scale: 0.5;
     }
@@ -1000,12 +1061,21 @@ blockquote p::before, blockquote p::after{
     .kontakt-socials{
     scale: 0.7;
     }
+    .onas-div-text .header{
+      font-size: 3rem;
+    }
 }
 
 @media (max-width: 480px) {
   .glide-carousell-wrapper{
     height: 100vh;
     gap: 2rem;
+  }
+  .mp-media-container img:nth-of-type(1) {
+    transform: translate(0, 1rem);
+  }
+  .mp-media-container img:nth-of-type(2) {
+    transform: translate(1rem, -2.975rem);
   }
 }
 
@@ -1015,5 +1085,8 @@ blockquote p::before, blockquote p::after{
   }
   #lightgallery{
     column-count: 1;
+  }
+  .onas-div-text .header{
+    font-size: 2.75rem;
   }
 }

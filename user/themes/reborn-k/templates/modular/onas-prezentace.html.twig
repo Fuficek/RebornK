@@ -69,3 +69,42 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 </script>
+
+<script>
+    window.addEventListener('resize', function() {
+        if (window.innerWidth < 900) {
+            moveDateElement();
+        } else {
+            restoreDateElement();
+        }
+    });
+
+    function moveDateElement() {
+        var sections = document.querySelectorAll('.onas-div');
+        sections.forEach(function(section) {
+            var dateElement = section.querySelector('.date');
+            var textContainer = section.querySelector('.onas-div-text');
+            if (dateElement && textContainer && !textContainer.contains(dateElement)) {
+                textContainer.insertBefore(dateElement, textContainer.firstChild);
+            }
+        });
+    }
+
+    function restoreDateElement() {
+        var sections = document.querySelectorAll('.onas-div');
+        sections.forEach(function(section) {
+            var dateElement = section.querySelector('.date');
+            var textContainer = section.querySelector('.onas-div-text');
+            if (dateElement && textContainer && textContainer.contains(dateElement)) {
+                section.insertBefore(dateElement, textContainer);
+            }
+        });
+    }
+
+    // Initial check on page load
+    window.addEventListener('load', function() {
+        if (window.innerWidth < 900) {
+            moveDateElement();
+        }
+    });
+</script>
