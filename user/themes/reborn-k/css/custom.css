@@ -313,34 +313,36 @@ blockquote p::before, blockquote p::after{
 /* hero image */
 .banner__wrapper .banner-grid img{
   width: 600px;
+  margin: -50px;
 }
 /* hero heading */
 .banner__wrapper .banner-grid h1{
-  font-size: clamp(2rem, 30vw, 8.78131rem);
+  font-size: 8.78131rem;
   font-style: normal;
   font-weight: 400;
-  line-height: normal;
+  line-height: 50px;
   padding: 0;
-  margin-top: -130px;
-  margin-bottom: -75px;
+  margin: 0;
 }
 /* hero heading bold */
 .banner__wrapper .banner-grid h1 b{
   color: var(--color-primary);
-  font-size: clamp(2rem, 30vw, 220px);
+  font-size:  220px;
   font-weight: 400;
-  line-height: normal;
+  line-height: 50px;
   filter: drop-shadow(0px 6px 25px #0000001a);
 }
 /* hero subheading */
 .banner__wrapper .banner-grid h2{
   font-size: 1.59588rem;
   font-style: normal;
+  margin-top: 40px;
   font-weight: 400;
   line-height: normal;
   color: var(--BLACK, #000);
   text-align: center;
   filter: drop-shadow(0px 6px 25px #0000001a);
+  max-width: 70vw;
 }
 
 /* -------------------- Mainpage Layout -------------------------*/
@@ -896,7 +898,12 @@ blockquote p::before, blockquote p::after{
 
 
 @media (max-width: 900px) {
-
+    div.content-outer {
+        height: 220px !important;
+      }
+  .banner__wrapper .banner-grid img{
+    width: 500px;
+  }
   .onas-div{
     flex-direction: column;
     gap: 2rem;
@@ -932,13 +939,6 @@ blockquote p::before, blockquote p::after{
   .kontakt-sub-container{
     width: 100vw;
   }
-  .banner-grid{
-    margin-top: 50px;
-    scale: 0.7;
-  }
-    .banner-grid h2{
-      max-width: 70vw;
-    }
   .mp-layout-container {
     flex-direction: column; /*important */
     justify-content: center;
@@ -1007,6 +1007,23 @@ blockquote p::before, blockquote p::after{
         }
 }
 @media (max-width: 750px) {
+  .banner__wrapper .banner-grid img {
+      width: 100vw;
+    }
+  .banner__wrapper .banner-grid h1 {
+      font-size: 7rem;
+    }
+  
+    /* hero heading bold */
+    .banner__wrapper .banner-grid h1 b {
+      font-size: 150px;
+    }
+  
+    /* hero subheading */
+    .banner__wrapper .banner-grid h2 {
+      font-size: 1rem;
+      margin-top: 15px;
+    }
   .footer-container{
     flex-direction: column;
     justify-content: center;
@@ -1022,10 +1039,18 @@ blockquote p::before, blockquote p::after{
 }
 
 @media (max-width: 600px) {
-
-  .banner-grid {
-      scale: 0.5;
+  div.content-outer{
+    height: 150px !important;
+}
+  .banner__wrapper .banner-grid h1 {
+      font-size: 5rem;
     }
+  
+    /* hero heading bold */
+    .banner__wrapper .banner-grid h1 b {
+      font-size: 7rem;
+    }
+
   .glide-carousell-wrapper{
     padding-top: 10vw;
     padding-bottom: 20vw;
@@ -1067,6 +1092,10 @@ blockquote p::before, blockquote p::after{
 }
 
 @media (max-width: 480px) {
+  .banner__wrapper .banner-grid img {
+      width: 110vw;
+    }
+  
   .glide-carousell-wrapper{
     height: 100vh;
     gap: 2rem;
@@ -1080,6 +1109,14 @@ blockquote p::before, blockquote p::after{
 }
 
 @media (max-width: 380px) {
+  .banner__wrapper .banner-grid h1 {
+      font-size: 4rem;
+    }
+  
+    /* hero heading bold */
+    .banner__wrapper .banner-grid h1 b {
+      font-size: 5rem;
+    }
   .footer-container{
     scale: 0.8;
   }
@@ -1089,4 +1126,3 @@ blockquote p::before, blockquote p::after{
   .onas-div-text .header{
     font-size: 2.75rem;
   }
-}
