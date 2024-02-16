@@ -49,20 +49,7 @@
             </section>
             <section class="kontakt-sub-container kontakt-form">
                 <h2 class="font bk lg bold">Kontaktujte nás!</h2>
-                <form class="kontakt-form font sm" action="kontakt" method="post">
-                    <div class="form-group">
-                        <label for="name">Jméno a Příjmení</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Zpráva</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Odeslat</button>
+                {% include "forms/form.html.twig" %}
             </section>
         </div>
     </div>

@@ -1,0 +1,24 @@
+{
+  "name": "hrabal-hire/simple-send",
+  "type": "grav-plugin",
+  "description": "This is a simple email sendig plugin from a form file, that allows the website user to fill in a form and send the contents to the recipients EmailAdress",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/hrabal-hire/grav-plugin-simple-send",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hrabal-Hireš",
+      "email": "info@hrabal-hires.cz",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\SimpleSend\\": "classes/"
+    },
+    "classmap":  ["simple-send.php"]
+  }
+}
