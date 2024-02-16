@@ -1,0 +1,24 @@
+{
+  "name": "fuficek/simple-email",
+  "type": "grav-plugin",
+  "description": "This plugin uses phpmail to send emails and uses capcha verification to minimize bots spamming recipients inbox.",
+  "keywords": ["plugin"],
+  "homepage": "https://github.com/Fuficek/grav-plugin-simple-email",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Hrabal &amp; Hireš",
+      "email": "matej.hrabal1@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.1.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "Grav\\Plugin\\SimpleEmail\\": "classes/"
+    },
+    "classmap":  ["simple-email.php"]
+  }
+}

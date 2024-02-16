@@ -1,0 +1,41 @@
+name: Simple Send
+slug: simple-send
+type: plugin
+version: 0.1.0
+description: This is a simple email sendig plugin from a form file, that allows the website user to fill in a form and send the contents to the recipients EmailAdress
+icon: plug
+author:
+  name: Hrabal-Hireš
+  email: info@hrabal-hires.cz
+homepage: https://github.com/hrabal-hire/grav-plugin-simple-send
+demo: http://demo.yoursite.com
+keywords: grav, plugin, etc
+bugs: https://github.com/hrabal-hire/grav-plugin-simple-send/issues
+docs: https://github.com/hrabal-hire/grav-plugin-simple-send/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    enabled:
+      type: toggle
+      label: PLUGIN_ADMIN.PLUGIN_STATUS
+      highlight: 1
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+    text_var:
+      type: text
+      label: PLUGIN_SIMPLE_EMAIL.TEXT_VARIABLE
+      help: PLUGIN_SIMPLE_EMAIL.TEXT_VARIABLE_HELP
+    recipient_email:
+              type: text
+              label: Recipient Email
+              help: 'Enter the email address where you want to receive form submissions.'
+              default: plugins.simple-email.recipient_email
