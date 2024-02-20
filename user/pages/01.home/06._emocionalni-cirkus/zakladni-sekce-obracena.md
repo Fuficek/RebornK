@@ -1,6 +1,6 @@
 ---
 title: 'Emocionální cirkus'
-media_order: rebornk-workshop.mp4
+media_order: Rebornk-Workshop.mp4
 ---
 
 **Náš workshop pořádaný na objednávku.**

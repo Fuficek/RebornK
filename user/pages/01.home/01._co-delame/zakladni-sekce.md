@@ -1,6 +1,6 @@
 ---
 title: 'Co děláme?'
-media_order: RebornK-uvodni-video.mp4
+media_order: Rebornk-Uvodni-Video.mp4
 ---
 
 Myslíme na budoucnost a vytváříme udržitelnější alternativy
