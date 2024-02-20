@@ -44,6 +44,6 @@ form:
             to: "{{ config.plugins.email.to }}"
             subject: "Contact by {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
-            display: thankyou
+            template: "email/base.html.twig"
 ---
 

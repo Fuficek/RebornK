@@ -46,7 +46,7 @@ en:
     SMTP_CONFIGURATION: "SMTP/S Configuration"
     SENDMAIL_CONFIGURATION: "Sendmail Configuration"
     ADVANCED: "Advanced"
-    EMAIL_FOOTER: "GetGrav.org"
+    EMAIL_FOOTER: '<a href="rebornk.com">rebornk.com</a>. Provozuje pro vás s láskou <a href="occamy.cz">occamy.cz</a>'
     QUEUE_TITLE: "Email Queue"
     QUEUE_DESC: "When you enable the email queue, email is not <i>sent immediately</i>, rather the email is sent to the queue, and then the Grav <strong>scheduler will flush the queue</strong> and actually send the email based on the configured frequency.  This ensures Grav is not waiting around for email connections to complete."
     QUEUE_ENABLED: "Enabled"
