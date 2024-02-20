@@ -184,7 +184,9 @@ blockquote p::before, blockquote p::after{
           transition: background-color 0.3s ease 0s;
           background-color: transparent;
         }
-        
+        .hamburger img{
+          height: 20px;
+        }
         .menu:hover{
         }
       
@@ -284,15 +286,6 @@ blockquote p::before, blockquote p::after{
     .active{
         /* if needed add styles for the current active link, the code is ready for it*/
     }
-  }
-        @media only screen and (max-width: 600px) {
-          .navbar{
-            padding: 5px;
-          }
-          .navbar img{
-            height: 70px;
-          }
-
   }
 
 /*-------------------- HERO -------------------------*/
@@ -1049,7 +1042,13 @@ blockquote p::before, blockquote p::after{
   .banner__wrapper .banner-grid h1 {
       font-size: 5rem;
     }
-  
+    .navbar {
+         padding: 5px;
+     }
+            
+    .navbar-brand img {
+        height: 70px;
+    }
     /* hero heading bold */
     .banner__wrapper .banner-grid h1 b {
       font-size: 7rem;
