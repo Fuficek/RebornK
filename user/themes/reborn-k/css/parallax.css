@@ -37,7 +37,7 @@ div.parallax {
 }
 
 div.parallax:after {
-    background-image: url("../images/rebornk-background-texture.jpg");
+    background-image: url("../images/rebornk-background-texture.webp");
     opacity: 0.1;
     background-repeat: no-repeat;
     background-position: center;

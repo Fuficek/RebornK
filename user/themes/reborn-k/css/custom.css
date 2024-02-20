@@ -418,7 +418,7 @@ blockquote p::before, blockquote p::after{
   position: relative;
   width: 100%;
   height: 105vh; /* Adjust the height as needed */
-  background-image: url("../images/balls-background.png");
+  background-image: url("../images/balls-background.webp");
   background-size: cover;
 }
 
@@ -1008,6 +1008,9 @@ blockquote p::before, blockquote p::after{
         }
 }
 @media (max-width: 750px) {
+  .mp-content h3{
+    font-size: 2rem;
+  }
   .banner__wrapper .banner-grid img {
       width: 100vw;
     }
