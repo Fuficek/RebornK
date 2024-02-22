@@ -388,11 +388,19 @@ blockquote p::before, blockquote p::after{
   color: var(--color-light);
   border: none;
   filter: drop-shadow(0px 6px 25px #0000001a);
+  cursor: pointer;
+  transition: cubic-bezier(0.55, 0.055, 0.675, 0.19) 0.3s all;
 }
 /* BUTTON alternative style */
 .sg a, .cta-wrapper a{
   background: var(--color-light);
   color: var(--color-dark);
+}
+/* BUTTON hover */
+.mp-content a:hover, .cta-wrapper a:hover, button:hover, .onas-container a:hover{
+  letter-spacing: 2px;
+  font-weight: 600;
+  filter: drop-shadow(0px 6px 25px #0000001a);
 }
 
 /* mainpage - media */
@@ -546,7 +554,7 @@ blockquote p::before, blockquote p::after{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 90%;
   padding: 0;
   padding: 2rem 0;
   filter: drop-shadow(0px 6px 25px #0000001a);
@@ -741,6 +749,7 @@ blockquote p::before, blockquote p::after{
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
+  font-family: var(--inter);
 }
 .onas-div img, .onas-div blockquote {
   border-radius: 1.75rem;
@@ -817,11 +826,15 @@ blockquote p::before, blockquote p::after{
   padding: 1.25rem;
   border: var(--color-primary) 2px solid;
   margin: 0;
+  width: 90%;
+  font: var(--inter);
+  max-width: 90%;
+  min-width: 90%;
 }
 .kontakt-form label{
   margin-left: 1rem;
 }
-.form-group{
+.form-field{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1100,7 +1113,7 @@ blockquote p::before, blockquote p::after{
     }
   
   .glide-carousell-wrapper{
-    height: 100vh;
+    height: 60vh;
     gap: 2rem;
   }
   .mp-media-container img:nth-of-type(1) {

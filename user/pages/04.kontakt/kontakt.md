@@ -8,8 +8,8 @@ form:
 
     fields:
         name:
-          label: Name
-          placeholder: Enter your name
+          label: Jméno a příjmení
+          placeholder: Jméno a příjmení
           autocomplete: on
           type: text
           validate:
@@ -17,14 +17,14 @@ form:
 
         email:
           label: Email
-          placeholder: Enter your email address
+          placeholder: Zadejte Váš Email
           type: email
           validate:
             required: true
 
         message:
-          label: Message
-          placeholder: Enter your message
+          label: Zpráva
+          placeholder: Zde napište svou zprávu.
           type: textarea
           validate:
             required: true
@@ -32,7 +32,7 @@ form:
     buttons:
         submit:
           type: submit
-          value: Submit
+          value: Odeslat
     process:
         - save:
             fileprefix: feedback-
@@ -42,8 +42,9 @@ form:
         - email:
             from: "{{ config.plugins.email.from }}"
             to: "{{ config.plugins.email.to }}"
-            subject: "Contact by {{ form.value.name|e }}"
+            subject: "Nové vyplnění formuláře na webu od: {{ form.value.name|e }}"
             body: "{% include 'forms/data.html.twig' %}"
             template: "email/base.html.twig"
+        - message: 'Děkujeme za vyplnění formuláře. Brzy se Vám ozveme.'
 ---
 

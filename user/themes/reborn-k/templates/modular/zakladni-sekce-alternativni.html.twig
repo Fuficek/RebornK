@@ -2,7 +2,7 @@
    <div class="mp-layout-container">
         {# Placeholder image for content (19:6 res) #}
         {% for media in page.media %}
-            <video style="position: relative;" src="{{ media.url }}" alt="{{ media.title }}" class="mp-image mp-video" loading="lazy" controls muted autoplay loop></video>
+            <video style="position: relative;" src="{{ media.url }}" alt="{{ media.title }}" class="mp-image mp-video" loading="lazy" controls controlsList="nodownload nofullscreen noremoteplayback" muted autoplay loop></video>
         {% else %}
             <img src="http://placehold.it/500x750" alt="placeholder image" class="mp-image" />
         {% endfor %}
